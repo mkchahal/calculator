@@ -4,6 +4,15 @@ import ButtonBox from "./components/ButtonBox/ButtonBox";
 import Button from "./components/Button/Button";
 
 function App() {
+
+  const btnValues = [
+      ["C", "+-", "%", "/"],
+      [7, 8, 9, "X"],
+      [4, 5, 6, "-"],
+      [1, 2, 3, "+"],
+      [0, ".", "="],
+    ];
+    
   return (
     <Wrapper>
       <Screen value="0" />
