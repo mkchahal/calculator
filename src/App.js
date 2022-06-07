@@ -2,8 +2,15 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import Screen from "./components/Screen/Screen";
 import ButtonBox from "./components/ButtonBox/ButtonBox";
 import Button from "./components/Button/Button";
+import { useState } from "react";
 
 function App() {
+
+  let [calc, setCalc] = useState({
+    sign: "",
+    num: 0,
+    res: 0
+  });
 
   const btnValues = [
       ["AC", "+/-", "%", "÷"],
@@ -26,7 +33,7 @@ function App() {
                 value={btn}
                 onClick={() => {
                   console.log(`${btn} clicked!`)
-                }}  
+                }} 
               />
             )
           })
