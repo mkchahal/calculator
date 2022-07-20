@@ -127,7 +127,15 @@ function App() {
             return (
               <Button
                 key={i}
-                className={btn === "=" ? "equals" : ""}
+                className={
+                  btn === "+" || btn === "-" ||btn === "X" || btn === "÷" || btn === "="
+                    ? "bright"
+                    : btn === "AC" || btn === "+/-" || btn === "%"
+                    ? "dull"
+                    : btn === 0
+                    ? "large"
+                    : ""
+                }
                 value={btn}
                 onClick={
                   btn === "AC"
